@@ -1,0 +1,43 @@
+                 DISK ALERT
+                     │
+                     ▼
+               df -hT
+                     │
+            Which filesystem?
+                     │
+                     ▼
+                 df -i
+                     │
+       Space or inode problem?
+             │              │
+         Space            Inodes
+             │              │
+             ▼              ▼
+          du -xhd1       Find directories
+             │
+             ▼
+      Which directory?
+             │
+             ▼
+      du -xhd1 <directory>
+             │
+             ▼
+       Which subdirectory?
+             │
+             ▼
+    find ... -size +1G
+             │
+             ▼
+       Which big files?
+             │
+             ▼
+   Investigate before deleting
+             │
+             ▼
+       Still unexplained?
+             │
+             ▼
+        lsof +L1
+             │
+             ▼
+   Deleted files held open?
